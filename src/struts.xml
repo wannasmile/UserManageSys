@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.convention.result.path" value="/" /> 
+  	<constant name="struts.i18n.encoding" value="UTF-8" /> 
+  	<include file="struts-default.xml" /> 
+  	<package name="default" extends="struts-default">
+  		<!-- 用户模块 -->
+  		<!-- 登录用户 -->
+  		<action name="UserLogin" class="userAction" method="UserLogin">
+			<result name="LoginSuccess">/user_information.jsp</result>
+			<result name="LoginFailure">/user_login.jsp</result>
+		</action>		
+		<!-- 注册用户 -->
+		<action name="AddUser" class="userAction" method="AddUser">
+			<result name="registerSuccess">/user_information.jsp</result>
+			<result name="registerFail">/user_register.jsp</result>
+		</action>		
+		<!-- 退出用户 -->
+		<action name="UserLogout" class="userAction" method="UserLogout">
+			<result name="success">/index.jsp</result>
+			<result name="error">/index.jsp</result>		
+		</action>
+		<action name="UpdateUser" class="userAction" method="UpdateUser">
+			<result name="UpdateUserSuccess">/user_information.jsp</result>
+			<result name="UpdateUserFailure">/user_update.jsp</result>
+		</action>
+		<action name="AllUser" class="userAction" method="AllUser">
+			<result name="AllUserSuccess">/user_all.jsp</result>
+			<result name="NoAuthority">/error.jsp</result>
+		</action>
+		<action name="CheckUser" class="userAction" method="CheckUser">
+			<result name="CheckUserSuccess">/user_information.jsp</result>
+			<result name="NoAuthority">/error.jsp</result>
+		</action>
+		<action name="DeleteUser" class="userAction" method="DeleteUser">
+			<result name="DeleteUserSuccess" type="chain">
+				<param name="actionName">AllUser</param>
+			</result>
+			<result name="DeleteUserFailure" type="chain">
+				<param name="actionName">AllUser</param>
+			</result> 
+			<result name="NoAuthority">/error.jsp</result>
+		</action>
+		
+				
+		<!-- 管理员模块 -->
+		<action name="AdminLogin" class="adminAction" method="AdminLogin">
+			<result name="AdminLoginSuccess">/admin_action.jsp</result>
+			<result name="AdminLoginFailure">/loginfail.jsp</result>
+			<result name="NoAuthority">/error.jsp</result>
+		</action>
+		<action name="AddAdmin" class="adminAction" method="AddAdmin">
+			<result name="AddAdminSuccess">/admin_action.jsp</result>
+			<result name="AddAdminFailure">/failure.jsp</result>
+			<result name="NoAuthority">/error.jsp</result>
+		</action>
+		<action name="AdminLogout" class="adminAction" method="AdminLogout">
+			<result name="success">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+			<result name="NoAuthority">/error.jsp</result>
+		</action>
+		
+	
+		
+  	</package>
+  	
+</struts>    

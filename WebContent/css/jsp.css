@@ -1,0 +1,64 @@
+HTML {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #f5f5f5; WIDTH: 100%; HEIGHT: 500px
+}
+BODY {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #f5f5f5; WIDTH: 100%; HEIGHT: 500px
+}
+TABLE {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #ffffff; WIDTH: 80%; HEIGHT: 400px
+}
+.form-signin-heading {
+	MARGIN-BOTTOM: 20px; COLOR: #0663a2; FONT-SIZE: 36px
+}
+.form-signin-title2 {
+	MARGIN-BOTTOM: 20px; COLOR: #0663a2; FONT-SIZE: 18px
+}
+
+.form-signin {
+	BORDER-BOTTOM: #e5e5e5 1px solid; POSITION: relative; TEXT-ALIGN: left; BORDER-LEFT: #e5e5e5 1px solid; PADDING-BOTTOM: 29px; BACKGROUND-COLOR: #fff; MARGIN: 0px auto 20px; PADDING-LEFT: 29px; WIDTH: 300px; PADDING-RIGHT: 29px; BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px solid; PADDING-TOP: 25px; box-shadow: 0 1px 2px rgba(0,0,0,.05); -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05)
+}
+
+.form-signin .checkbox {
+	MARGIN-BOTTOM: 10px; COLOR: #0663a2
+}
+.form-signin .input-label {
+	LINE-HEIGHT: 23px; COLOR: #999; FONT-SIZE: 16px
+}
+.form-signin .input-block-level {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 7px; WIDTH: 283px; PADDING-RIGHT: 7px; MARGIN-BOTTOM: 15px; HEIGHT: auto; FONT-SIZE: 16px; PADDING-TOP: 7px; _padding: 7px 7px 9px 7px
+}
+.form-signin .btn-large.btn {
+	FONT-SIZE: 16px
+}
+.form-signin #themeSwitch {
+	POSITION: absolute; BOTTOM: 10px; RIGHT: 15px
+}
+.form-signin DIV.validateCode {
+	PADDING-BOTTOM: 15px
+}
+.mid {
+	VERTICAL-ALIGN: middle
+}
+.header {
+	HEIGHT: 60px; PADDING-TOP: 30px
+}
+.alert {
+	POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px auto; WIDTH: 300px
+}
+LABEL.error {
+	PADDING-BOTTOM: 2px; MARGIN: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: none transparent scroll repeat 0% 0%; FONT-WEIGHT: normal; PADDING-TOP: 2px
+}
+
+.btn {
+	BORDER-BOTTOM: #b3b3b3 0px solid; TEXT-ALIGN: center; FILTER: progid:DXImageTransform.Microsoft.gradient(enabled=false); BORDER-LEFT: #e6e6e6 0px solid; PADDING-BOTTOM: 4px; LINE-HEIGHT: 20px; BACKGROUND-COLOR: #e6e6e6; PADDING-LEFT: 12px; PADDING-RIGHT: 12px; ZOOM: 1; DISPLAY: inline; BACKGROUND-REPEAT: repeat-x; MARGIN-BOTTOM: 0px; COLOR: #333; MARGIN-LEFT: 0.3em; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; BORDER-TOP: #e6e6e6 0px solid; CURSOR: pointer; BORDER-RIGHT: #e6e6e6 0px solid; PADDING-TOP: 4px; text-shadow: 0 1px 1px rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05); -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05)
+}
+.btn-primary {
+	BORDER-BOTTOM-COLOR: #000080; FILTER: progid:DXImageTransform.Microsoft.gradient(enabled=false); BACKGROUND-COLOR: #04c; BORDER-TOP-COLOR: #04c; BACKGROUND-REPEAT: repeat-x; COLOR: #fff; BORDER-RIGHT-COLOR: #04c;  
+}
+
+INPUT[type='submit'].btn-large.btn {
+	PADDING-BOTTOM: 7px; PADDING-TOP: 7px
+}
+[type='button'].btn-large.btn {
+	 PADDING-TOP: 7px
+}

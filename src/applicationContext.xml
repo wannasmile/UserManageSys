@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		
+	<!-- 用户相关信息操作 -->
+	<bean id="userAction" class="com.action.UserAction" scope="prototype">
+		<property name="userinfoService">
+			<ref bean="userinfoService"/>
+		</property>
+	</bean>	
+	<bean id="userinfoService" class="com.service.impl.UserInfoServiceImpl" >
+		<property name="userinfoDao">
+			<ref bean="userinfoDao"/>
+		</property>
+	</bean>
+	<bean id="userinfoDao" class="com.dao.impl.UserInfoDaoImpl" >
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<!-- 管理员相关操作 -->
+	<bean id="adminAction" class="com.action.AdminAction" scope="prototype">
+		<property name="adminInfoService">
+			<ref bean="adminInfoService"/>
+		</property>
+	</bean>
+	<bean id="adminInfoService" class="com.service.impl.AdminInfoServiceImpl">
+		<property name="adminInfoDao">
+			<ref bean="adminInfoDao"/>
+		</property>
+	</bean>
+	<bean id="adminInfoDao" class="com.dao.impl.AdminInfoDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url" value="jdbc:mysql://localhost:3306/user_manage_sys"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+		
+		<property name="maxActive" value="100" ></property>
+		<property name="maxIdle" value="30" ></property>
+		<property name="maxWait" value="10000" ></property>
+		
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/model/UserInfo.hbm.xml</value>
+				<value>com/model/AdminInfo.hbm.xml</value>
+			</list>
+		</property></bean></beans>
